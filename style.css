@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(253, 234, 234);
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 0.8fr 3.5fr;
+    grid-template-rows: 170px 5fr;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ---------- S I D E   M E N U ---------- */
+
+.side-menu {
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 1fr 3fr 4fr;
+    gap: 25px;
+    font-weight:500;
+    background: #991b1b;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.side-menu ul li {
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 12px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.side-menu ul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    margin-left: 60px;
+    background: #fff;
+    transition: width .5s;
+}
+
+.side-menu ul li a:hover::after {
+    width: 50%;
+}
+
+.side-menu h1 {
+    display: flex;
+    align-items: center;
+    gap: -10px;
+    padding: 20px 0 0 15px;
+}
+
+.side-menu h1 img {
+    font-size: 20px;
+}
+
+.side-menu ul li img {
+    padding: 0 15px;
+}
+
+
+/* ---------- T O P    B A R ---------- */
+
+.top {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    padding: 20px 35px;
+    box-shadow: 1px 1px 15px 0px rgb(153, 27, 27, 0.3);
+
+    background: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.nav {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-left label img {
+    padding-top: 6px;
+}
+
+.nav-left #search {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: rgb(253, 234, 234);
+    border-radius: 20px;
+    height: 30px;
+    width: 90%;
+    min-width: 10px;
+    padding: 17px 15px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.nav-left #search:focus {
+    border: 0.5px solid #991b1b;
+    box-shadow: 1px 1px 3px 0 rgb(153, 27, 27, 0.3);
+}
+
+.nav-right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 25px;
+    padding-right: 5rem;
+}
+
+.nav .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-right .notification {
+    cursor: pointer;
+}
+
+.header {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    padding-top: 15px 0 10px 0;
+    gap: 10px;
+}
+
+
+.header .profile {
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+}
+
+
+.header p {
+    font-weight: 500;
+}
+
+.header h4 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding-top: 7px;
+}
+
+.header .btn{
+    display: flex;
+    margin-left: auto;
+    padding-right: 4.5rem;
+    gap: 25px;
+}
+
+.header button {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    background: #991b1b;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.header button:hover {
+    background: #a82323;
+    box-shadow: 1px 1px 5px 0px #a823239a;
+}
+
+
+/* ---------- M A I N    C O N T E N T  ------------*/
+
+.content {
+    margin-top: 10px;
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.content .main h2 {
+    padding: 20px 30px;
+    font-size: 23px;
+}
+
+.content .main .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content .main .prj {
+    display: grid;
+    min-height: 250px;
+    background: #fff;
+    padding: 23px;
+    border-radius: 10px;
+    border-left: 10px solid rgb(246, 207, 32);
+    box-shadow: 1px 1px 10px 0px rgb(153, 27, 27, 0.2);
+    transition: transform 0.5s;
+}
+
+.content .main .prj h3 {
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.content .main .prj p {
+    min-height: 140px;
+    font-size: 17px;
+    opacity: 0.6;
+}
+
+.content .main .prj:hover {
+    transform: scale(1.01);
+    z-index: 0;
+}
+
+.content .projects .icons {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.content .projects .icons img {
+    cursor: pointer;
+}
+
+.side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.side .side-up {
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin: 0 30px;
+}
+
+.side .side-up .articles {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px rgb(153, 27, 27, 0.2);
+}
+
+.side .side-up .articles > div {
+    padding: 23px 23px 0;
+}
+
+.side .side-up .articles p {
+    opacity: 0.6;
+}
+
+.side .side-up .articles div:nth-child(1) p {
+    padding-bottom: 23px;
+    border-bottom: 0.5px solid rgb(153, 27, 27, 0.5);
+}
+
+.side .side-up .articles div:nth-child(2) p {
+    padding-bottom: 23px;
+    border-bottom: 0.5px solid rgb(153, 27, 27, 0.5);
+}
+
+.side .side-up .title {
+    padding: 20px 10px;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.side .side-up h3 {
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.side-bottom {
+    margin: 0 30px;
+}
+
+.side-bottom h3 {
+    padding: 20px 10px;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.side-bottom .card {
+    padding: 23px;
+}
+
+.side-bottom .users {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px rgb(153, 27, 27, 0.2);
+}
+
+.side-bottom .card .trend{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 13px 0px;
+}
+
+.side-bottom .users .card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0.5px solid #991b1b;
+}
+
+.side-bottom .card-text {
+    opacity: 0.6;
+}

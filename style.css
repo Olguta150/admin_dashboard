@@ -345,11 +345,11 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 0.5px solid #991b1b;
+    border: 2px solid #991b1b;
 }
 
 .side-bottom .users .card .trend-2 img {
-    border: 0.5px solid blue;
+    border: 2px solid blue;
 }
 
 .side-bottom .card-text {

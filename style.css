@@ -348,6 +348,10 @@ body {
     border: 0.5px solid #991b1b;
 }
 
+.side-bottom .users .card .trend-2 img {
+    border: 0.5px solid blue;
+}
+
 .side-bottom .card-text {
     opacity: 0.6;
 }
